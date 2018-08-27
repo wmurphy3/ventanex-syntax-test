@@ -1,0 +1,36 @@
+<div class="col-md-12">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3>
+        Pay Accounts
+      </h3>
+    </div>
+    <div class="panel-body">
+      <div class="table-responsive mt-2">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Created At</th>
+              <th>Name</th>
+              <td>Account Number</td>
+            </tr>
+          </thead>
+          <tbody>
+            <% @pay_accounts.each do |pay_account| %>
+              <tr>
+                <td><%= pay_account.id %></td>
+                <td><%= pay_account.created_at %></td>
+                <td><%= pay_account.name.titleize %></td>
+                <th><%= pay_account.account_number %></th>
+              </tr>
+              <td>
+                <button type="button" class="hide-pay-account">Hide Pay Account</button>
+              </td>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
